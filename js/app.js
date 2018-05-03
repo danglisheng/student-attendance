@@ -9,21 +9,20 @@ $(function(){
 		],
 		init:function() {
 			/* 如果本地存储没有缓存出勤记录，则初始化缓存。 */
-	if (!localStorage.attendance) {
-		console.log('Creating attendance records...');
-		function getRandom() {
-			return (Math.random() >= 0.5);
-		}
-		var attendance = {};
-		$.each(model.students,function(index,student){
-		 attendance[student.name]=[];
-		for(var i=0;i<11;i++){
-		  attendance[student.name].push(getRandom());
-		}
-		});
-		localStorage.attendance=JSON.stringify(attendance);
-		console.log(attendance);
-	}
+			if (!localStorage.attendance) {
+				console.log('Creating attendance records...');
+				function getRandom() {
+					return (Math.random() >= 0.5);
+				}
+				var attendance = {};
+				$.each(model.students,function(index,student){
+				 attendance[student.name]=[];
+				for(var i=0;i<=11;i++){
+				  attendance[student.name].push(getRandom());
+				}
+				});
+				localStorage.attendance=JSON.stringify(attendance);
+			}
 			var attendance=JSON.parse(localStorage.attendance);
 			$.each(model.students,function(index,student){
 				var dayRecords=attendance[student.name];
