@@ -15,6 +15,7 @@
 
 		});
 		localStorage.attendance=JSON.stringify(attendance);
+		console.log(attendance);
 	}
 }());
 
