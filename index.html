@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>学生考勤表</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>学生考勤表</h1>
+	<table>
+		<thead>
+			<tr>
+				<th class="name-col">学生姓名</th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th class="missed-col">缺勤天数</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	<script type="text/template" data-template="student">
+		<tr class="student">
+				<td class="name-col"></td>
+				<td class="missed-col">0</td>
+		</tr>
+	</script>
+	<script type="text/template" data-template="attend-col">
+			<td class="attend-col" data-id={{id}}><input type="checkbox"></td>
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	
+</body>
+</html>
