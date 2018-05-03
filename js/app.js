@@ -1,4 +1,5 @@
-(function() {
+$(function(){
+	/* 如果本地存储没有缓存出勤记录，则初始化缓存。 */
 	if (!localStorage.attendance) {
 		console.log('Creating attendance records...');
 		function getRandom() {
@@ -17,9 +18,7 @@
 		localStorage.attendance=JSON.stringify(attendance);
 		console.log(attendance);
 	}
-}());
-
-$(function(){
+	
 	var model={
 		students:[
 		{name:'Slappy the Frog',dayChecks:[],daysMissed:0},
