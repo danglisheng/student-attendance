@@ -15,6 +15,7 @@ $(function(){
 			}
 
 		});
+		console.log(nameColumns);
 		localStorage.attendance=JSON.stringify(attendance);
 		console.log(attendance);
 	}
